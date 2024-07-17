@@ -1,0 +1,73 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+}
+
+header {
+    height: 0;
+}
+
+main {
+    height: 100vh;
+    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/hd/5eeea355389655.59822ff824b72.gif);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: flex;
+    padding: 10px;
+}
+
+h1,h3,pre,ul,blockquote {
+    margin: 0;
+}
+
+h1 {
+    color: burlywood;
+}
+
+h3 {
+    padding-right: 210px;
+    text-align: end;
+}
+
+/* id */
+#content {
+    width: 60%;
+}
+
+pre {
+    padding-right: 10px;
+    max-height: 300px;
+    color: green;
+}
+
+/* tag con */
+ul {
+    li {
+        a {
+            outline: none;
+        }
+    }
+}
+
+/* Custom image */
+#avatar {
+    width: 40%;
+    overflow: hidden;
+}
+
+#avatar img {
+    width: 40%;
+    height: 40%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: cyan;
+    border-radius: 15px;
+}
