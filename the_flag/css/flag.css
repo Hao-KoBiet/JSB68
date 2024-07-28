@@ -2,14 +2,6 @@ body {
     padding: 0;
     margin: 0 auto;
 }
-
-@media only screen and (max-width: 600px) {
-    .flag-group {
-        grid-template-columns: auto;
-    }
-}
-    
-
 .flag-group {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -34,10 +26,9 @@ body {
     background: url(https://www.clipartqueen.com/image-files/yellow-star-3.png);
     background-repeat: no-repeat;
     background-size: contain;
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     position: absolute;
-    top: 0;
     left: 45%;
     top: 50%;
     /* right: 50%;
@@ -60,4 +51,9 @@ body {
     height: 50%;
     top: 50%;
     left: 0;
+}
+@media only screen and (max-width: 768px) {
+    .flag-group {
+        grid-template-columns: auto;
+    }
 }

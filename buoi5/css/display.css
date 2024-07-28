@@ -1,0 +1,25 @@
+#inline, #inline-block, #block, #none {
+    background-color: red;
+    /* padding: 20px; */
+    width: 100px;
+    height: 100px;
+}
+
+/* ko chỉnh dc height và width */
+#inline {
+    display: inline;
+}
+/* chỉnh height,width ko xuong hang*/
+#inline-block {
+    display: inline-block;
+}
+
+/* chinh dc height.width (xuong hang) */
+#block {
+    display: block;
+}
+
+/* an compoment */
+#none {
+    display: none;
+}
