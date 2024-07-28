@@ -13,7 +13,7 @@ p {
 }
 
 p, li {
-    padding-left: 20px;
+    text-align: left;
 }
 
 #lien-ket, #ky-nang {
