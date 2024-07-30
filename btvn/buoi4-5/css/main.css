@@ -3,6 +3,11 @@ body {
     margin: 0 auto;
 }
 .san-pham {
+    display: grid;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+    justify-content: center;
     position: relative;
     width: 300px;
     border-radius: 8px;
@@ -31,6 +36,9 @@ body {
 .nav {
     position: fixed;
     top: 0;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     background-color: #0dd3e2;
     color: #ffffff;
