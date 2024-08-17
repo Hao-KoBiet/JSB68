@@ -1,0 +1,147 @@
+body {
+    padding: 0;
+    margin: 0 auto;
+}
+.san-pham {
+    display: grid;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+    justify-content: center;
+    position: relative;
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #0dd3e2;
+    color: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(108, 68, 68, 0.1);
+}
+
+.nav ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+
+    justify-content: center;
+}
+
+.nav ul li {
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    color: #000000;
+    padding: 8px 16px;
+    display: block;
+}
+
+.nav ul li a:hover {
+    background-color: #0025cb;
+}
+.about-us, h2, h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing-table .plan {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-basis: 30%;
+    margin: 0 10px;
+}
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    color: #666;
+}
+
+.plan-features li {
+    margin: 10px 0;
+}
+
+.plan-signup {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.plan-signup:hover {
+    background-color: #0056b3;
+}
+
+.cta-section {
+    background-color: #007BFF;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+.cta-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #FF5733;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #C70039;
+}
+
+.footer-bottom {
+    font-size: 0.9em;
+    color: #bbb;
+    margin-top: 20px;
+}
+
+.footer-content p {
+    margin: 0 0 10px;
+    font-size: 1em;
+}
+
+.footer-content a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
