@@ -18,9 +18,12 @@
       crossorigin="anonymous" 
       referrerpolicy="no-referrer" 
     />
+
+    <!-- add css file -->
+    <link rel="stylesheet" href="./css/main.css">
   </head>
   <body>
-    <header id="home" class="container-fluid colored section">
+    <header id="home" class="container-fluid colored-section">
       <!-- navigation -->
       <nav class="navbar navbar-expand-lg navbar-dark">
        <div class="container-fluid">
@@ -165,12 +168,113 @@
           </button>
         </div>
       </section>
-    </main>
 
-    <!-- card list -->
+      <!-- card list -->
+        <section id="pricing">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card text-center">
+                <h5 class="card-header">Chihuahua</h5>
+                <div class="card-body">
+                  <h5 class="card-title">Free</h5>
+                 <p class="card-text">5 Matches Per Day</p>
+                 <p class="card-text">10 Massages Per Day</p>
+                 <p class="card-text">Unlimited Age Usage</p>
+                 <a href="#" class="btn btn-outline-dark">Sign Up</a>
+               </div>
+               
+            </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card text-center">
+                <h5 class="card-header">Chihuahua</h5>
+                <div class="card-body">
+                  <h5 class="card-title">Free</h5>
+                 <p class="card-text">5 Matches Per Day</p>
+                 <p class="card-text">10 Massages Per Day</p>
+                 <p class="card-text">Unlimited Age Usage</p>
+                 <a href="#" class="btn btn-outline-dark">Sign Up</a>
+               </div>
+               
+            </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card text-center">
+                <h5 class="card-header">Chihuahua</h5>
+                <div class="card-body">
+                  <h5 class="card-title">Free</h5>
+                 <p class="card-text">5 Matches Per Day</p>
+                 <p class="card-text">10 Massages Per Day</p>
+                 <p class="card-text">Unlimited Age Usage</p>
+                 <a href="#" class="btn btn-outline-dark">Sign Up</a>
+               </div>
+               
+            </div>
+            </div>
+          </div>
+        </section>
+
+      <!-- contact us -->
+      <section id="contact" class="colored-section">
+        <h1 class="contact_header">
+          Find the True Love of Your Dog's Life Today.
+        </h1>
+        <form action="./html/done.html" method="get">
+          <div class="mb-3">
+            <label for="user_email" class="form-label"
+              >Email address</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="user_email"
+              placeholder="name@example.com"
+              name="user_email"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label"
+              >Message</label
+            >
+            <textarea
+              class="form-control"
+              id="message"
+              name="message"
+              rows="3"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="contact_submit">Submit</button>
+        </form>
+      </section>
+
+    </main>
+      <!-- logo -->
+      <div class="press-logo-list">
+        <!-- <img src="./assets/images/TechCrunch2.png" alt="" class="press-logo"> -->
+        <img src="./assets/images/tnw.png" alt="" class="press-logo">
+        <img src="./assets/images/bizinsider.png" alt="" class="press-logo">
+        <img src="./assets/images/mashable.png" alt="" class="press-logo">
+      </div>
 
     <!-- footer -->
-
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <p class="col-md-4 mb-0 text-muted">&copy; 2022 Company, Inc</p>
+    
+        <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+        </a>
+    
+        <ul class="nav col-md-4 justify-content-end">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+        </ul>
+      </footer>
+    </div>
     <!-- add bootstrap js file -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
