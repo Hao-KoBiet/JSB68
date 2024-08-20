@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register And Login</title>
+    
+</head>
+<body>
+    <h1>Register</h1>
+    <section id="contact" class="colored-section">
+        <form action="./html/done.html" method="get">
+          <div class="mb-3">
+            <label for="name" class="form-label"
+              >User Name</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Nick Name..."
+              name="name"
+              minlength="6"
+              maxlength="18"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="user_email" class="form-label"
+              >Email</label
+            >
+            <input
+              type = "email"
+              class="form-control"
+              id="user_email"
+              placeholder="abc123@gmail.com"
+              name="user_email"
+              required
+            ></input>
+          </div>
+
+          <div class="mb-3">
+            <label for="user_password" class="form-label"
+              >Password</label
+            >
+            <input
+              type = "password"
+              class="form-control"
+              id="user_password"
+              placeholder="Password"
+              name="user_password"
+              value="user_password"
+              minlength="6"
+              maxlength="18"
+              required
+            ></input>
+          </div>
+
+          <div class="mb-3">
+            <label for="user_confirmpw" class="form-label"
+              >Confirm Password</label
+            >
+            <input
+              type = "password"
+              class="form-control"
+              id="user_confirmpw"
+              placeholder="Confirm Password"
+              name="user_confirmpw"
+              value="user_confirmpw"
+              required
+            ></input>
+          </div>
+          <button type="submit" class="btn btn-primary" id="contact_submit">Submit</button>
+        </form>
+      </section>
+
+
+
+      <h1>Login</h1>
+    <section id="contact" class="colored-section">
+        <form action="./html/done.html" method="get">
+          <div class="mb-3">
+            <label for="name" class="form-label"
+              >User Name</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Nguyễn Văn A"
+              name="name"
+              minlength="6"
+              maxlength="18"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="user_lpassword" class="form-label"
+              >Password</label
+            >
+            <input
+              type = "password"
+              class="form-control"
+              id="user_lpassword"
+              placeholder="Password"
+              name="user_lpassword"
+              minlength="6"
+              maxlength="18"
+              required
+            ></input>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="contact_submit">Submit</button>
+        </form>
+      </section>
+</body>
+</html>
