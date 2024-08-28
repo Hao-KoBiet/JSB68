@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Page</title>
-    <link rel="stylesheet" href="../css/login.css" />
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="../css/signup.css" />
     <link
       rel="shortcut icon"
       href="https://img.icons8.com/?size=100&id=enZOTH5kGrxd&format=png&color=000000"
@@ -21,9 +21,19 @@
         <i class="arrow_back">Back</i>
       </button>
     </a>
-    <div class="login-container">
-      <form class="login-form">
-        <h2>Login</h2>
+    <div class="signup-container">
+      <form class="signup-form">
+        <h2>Sign Up</h2>
+        <div class="input-group">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Full Name"
+            required
+          />
+        </div>
         <div class="input-group">
           <label for="email">Email:</label>
           <input
@@ -46,14 +56,25 @@
             required
           />
         </div>
-        <div class="checkbox-group">
-          <input type="checkbox" id="remember-me" />
-          <label for="remember-me">Remember me</label>
+        <div class="input-group">
+          <label for="confirm-password">Confirm Password:</label>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            minlength="6"
+            maxlength="16"
+            placeholder="Confirm Password"
+            required
+          />
         </div>
-        <button type="submit" class="login-btn">Login</button>
+        <div class="checkbox-group">
+            <input type="checkbox" id="policy" required />
+            <label for="policy">I have read and agree to the <a href="./policy.html">terms and conditions</a>.</label>
+          </div>
+        <button type="submit" class="signup-btn">Sign Up</button>
         <div class="form-footer">
-          <a href="#">Forgot password?</a>
-          <p>Don't have an account? <a href="./signup.html">Sign up</a></p>
+          <p>Already have an account? <a href="./login.html">Log in</a></p>
         </div>
       </form>
     </div>

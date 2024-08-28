@@ -1,6 +1,9 @@
 body {
     padding: 0;
     margin: 0 auto;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
 }
 .san-pham {
     display: grid;
@@ -53,6 +56,10 @@ body {
     color: #ffffff;
     padding: 10px 0;
     box-shadow: 0 2px 4px rgba(108, 68, 68, 0.1);
+}
+
+.contact-list {
+    background-color:#45a049;
 }
 
 .nav ul {
@@ -180,6 +187,10 @@ h5 {
 
 .plan-signup:hover {
     background-color: #0056b3;
+}
+
+h1 h2 h3 h4 h5 h6 {
+    font-weight: bold;
 }
 
 @media only screen and (max-width: 768px) {
