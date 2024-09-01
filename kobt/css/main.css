@@ -127,6 +127,7 @@ h5 {
     justify-content: center;
     padding-top: 45px;
     gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
 }
 
 .container img {
@@ -196,5 +197,17 @@ h1 h2 h3 h4 h5 h6 {
 @media only screen and (max-width: 768px) {
     body {
         font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container img {
+      flex-basis: calc(50% - 20px); /* Hiển thị 2 hình ảnh trên một hàng khi màn hình nhỏ hơn 768px */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container img {
+      flex-basis: calc(100% - 20px); /* Hiển thị 1 hình ảnh trên một hàng khi màn hình nhỏ hơn 480px */
     }
 }
