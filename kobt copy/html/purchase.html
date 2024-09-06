@@ -83,9 +83,13 @@
 
       }
       document.querySelector('.buy-button').onclick = function() {
-        localStorage.setItem('cartItemsImage',selectedImage)
-        localStorage.setItem('cartItemsDesc',selectedDesc)
+        let NewItem = {selectedImage,selectedDesc,selectedPName}
+        cartItem.unshift(NewItem)
         window.location.href = './cart.html'
+        clearAllLocalStorage()
+      }
+      function clearAllLocalStorage() {
+        localStorage.clear()
       }
   </script>
 </body>
