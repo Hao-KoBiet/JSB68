@@ -52,10 +52,14 @@
     
         <div class="product-quantity">
           <label for="quantity">Quantity:</label>
-          <input type="number" id="quantity" name="quantity" value="1" min="1">
+          <input type="number" id="productQuantity" name="quantity" min="1" max="9999" required>
           <label for="quantity" style="font-size: 14px;">Storage: 9999</label>
         </div>
-    
+        
+        <div class="product-price">
+          <label for="price">Price: <p id="productPrice"></p></label>
+        </div>
+
         <div class="product-description">
           <label for="description">Description:</label>
           <p name="description" id="productDesc"> My Food</p>
@@ -65,31 +69,32 @@
     </div>
 
     <script>
-      // Lấy tên hình ảnh từ localStorage
       let selectedImage = localStorage.getItem('selectedProductImage')
       let selectedDesc = localStorage.getItem('selectedProductDescription')
       let selectedPName = localStorage.getItem('selectedProductName')
-      const cartItem = []
+      let selectedPrice = localStorage.getItem('selectedProductPrice')
       
-      // Hiển thị hình ảnh sản phẩm đã chọn
-      if (selectedImage && selectedDesc && selectedPName) {
+      if (selectedImage && selectedDesc && selectedPName && selectedPrice) {
         document.getElementById('productImage').src = '../product-image/' + selectedImage
         document.getElementById('productDesc').textContent = selectedDesc
         document.getElementById('productName').textContent = selectedPName
+        document.getElementById('productPrice').textContent = selectedPrice
       } else {
         document.getElementById('productImage').alt = 'Không có sản phẩm nào được chọn'
         document.getElementById('productDesc').textContent = 'Vui lòng quay lại trang trước để chọn sản phẩm.'
         document.getElementById('productName').textContent = 'Vui lòng quay lại trang trước để chọn sản phẩm'
+        document.getElementById('productPrice').textContent = 'Vui lòng quay lại trang trước để chọn sản phẩm'
 
       }
       document.querySelector('.buy-button').onclick = function() {
-        let NewItem = {selectedImage,selectedDesc,selectedPName}
-        cartItem.unshift(NewItem)
+        let selectedQuantity = document.getElementById('productQuantity').value
+
+        localStorage.setItem('cartItemsImage',selectedImage)
+        localStorage.setItem('cartItemsDesc',selectedDesc)
+        localStorage.setItem('cartItemsPrice',selectedPrice)
+        localStorage.setItem('cartItemsPname',selectedPName)
+        localStorage.setItem('cartItemsQuantity',selectedQuantity)
         window.location.href = './cart.html'
-        clearAllLocalStorage()
-      }
-      function clearAllLocalStorage() {
-        localStorage.clear()
       }
   </script>
 </body>

@@ -31,6 +31,7 @@ body {
 }
 
 .product-quantity label,
+.product-price label,
 .product-description label {
     display: block;
     margin-bottom: 5px;

@@ -9,6 +9,10 @@
 #search-input {
     width: 100%; 
 }
+
+body {
+    padding-bottom: 100px;
+}
   
 
 .grid-container {
@@ -16,7 +20,12 @@
     display: grid;
     column-gap: 10px;
     row-gap: 30px; 
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+}
+
+.content {
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
   
 .image-container {

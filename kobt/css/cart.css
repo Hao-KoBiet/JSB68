@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
+    background-color: #fff;
     color: #333;
     margin: 0;
     padding: 0;
@@ -52,7 +52,13 @@ h1.productName {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+}
+
+.payProduct {
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+}
   
 .delete-button {
     position: absolute;
