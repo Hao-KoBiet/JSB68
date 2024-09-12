@@ -3,7 +3,7 @@ body {
     background-color: #fff;
     color: #333;
     margin: 0;
-    padding: 0;
+    padding-bottom: 90px;
 }
   
 .navbar {
@@ -33,7 +33,7 @@ body {
 h1.productName {
     margin-bottom: 20px;
     font-size: 48px;
-    color: #007bff;
+    color: #16ec53;
 }
   
 .product-list {
@@ -58,6 +58,7 @@ h1.productName {
     display: flex;
     justify-content: space-around;
     font-weight: bold;
+    text-align: center;
 }
   
 .delete-button {
@@ -116,6 +117,20 @@ h1.productName {
   
     .navbar a {
       font-size: 1.2rem;
+    }
+
+    .pay-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pay-list ul {
+        margin-bottom: 10px;
+    }
+
+    .total-price {
+        flex-direction: column;
+        align-items: center;
     }
 }
   

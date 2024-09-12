@@ -55,19 +55,33 @@
 
       <hr style="border: 1px solid black; width: 75%" />
 
-    <div style="box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);border-radius: 20px; width: 75%; height: 50%;padding: 20px;" >
+    <div style="box-shadow: 5px 7px 10px rgba(0, 0, 0, 0.1);border-radius: 20px; width: 75%; height: 50%;padding: 20px;" >
         <div class="pay-list" id="payList">
-          <div style="display: flex; justify-content: space-around; text-align: center; font-weight: bold; font-size: 1.6rem;">
-            <p>Name</p>
-            <p>Price</p>
-            <p>Quantity</p>
-            <p>Total Price</p>
+          <div style="display: flex; justify-content: space-around; text-align: center;">
+            <ul style="display: flex; flex-direction: column;text-align: center;list-style: none;" id="nameList">
+              <li style="font-weight: bold; font-size: 1.6rem;"><h3><strong>Name</strong></h3></li>
+            </ul>
+
+            <ul style="display: flex; flex-direction: column;text-align: center;list-style: none;" id="priceList">
+              <li style="font-weight: bold; font-size: 1.6rem;"><h3><strong>Price</strong></h3></li>
+            </ul>
+
+            <ul style="display: flex; flex-direction: column;text-align: center;list-style: none;" id="quantityList">
+              <li style="font-weight: bold; font-size: 1.6rem;"><h3><strong>Quantity</strong></h3></li>
+            </ul>
+
+            <ul style="display: flex; flex-direction: column;text-align: center;list-style: none;" id="totalList">
+              <li style="font-weight: bold; font-size: 1.6rem;"><h3><strong>Total</strong></h3></li>
+            </ul>
           </div>
         </div>
-        <h3 style="padding-left: 30px; padding-top: 30px;"><strong>Total: <p style="font-size: 1.4rem;" id="TotalItemPrice"></p></strong></h3>
-      </div>
 
-      <button class="checkout-button" onclick="Checkout()">Pay</button>
+        <div style="display: flex;">
+          <h3 style="padding-left: 30px; padding-top: 30px;"><strong>Total Price: </strong></h3>
+          <p style="font-size: 1.6rem;padding-top: 30px;padding-left: 20px;font-weight: bold;" id="TotalItemPrice"></p>
+        </div>
+
+      <button class="checkout-button" onclick="Pay()">Pay</button>
     </div>
 
     <script>
@@ -78,7 +92,7 @@
       function createItem() {
         let cartItemsImage = localStorage.getItem("cartItemsImage");
         let cartItemsDesc = localStorage.getItem("cartItemsDesc");
-        let cartItemsPrice = localStorage.getItem("cartItemsPrice");
+        let cartItemsPrice = parseFloat(localStorage.getItem("cartItemsPrice"))
 
         // Tạo Sản Phẩm
         const newItem = document.createElement("div");
@@ -95,7 +109,7 @@
         ItemDesc.id = "product-description";
 
         const ItemPrice = document.createElement("p");
-        ItemPrice.textContent = cartItemsPrice;
+        ItemPrice.textContent = Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(cartItemsPrice)
         ItemPrice.id = "product-price";
 
         const deleteButton = document.createElement("button");
@@ -117,45 +131,38 @@
         // Tạo hóa đơn sản phẩm
         let cartItemsQuantity = localStorage.getItem("cartItemsQuantity")
         let cartItemsPname = localStorage.getItem("cartItemsPname");
-        let ItemTotalPrice = parseFloat(cartItemsPrice) * parseInt(cartItemsQuantity)
+        let ItemTotalPrice = Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(parseFloat(cartItemsPrice) * parseInt(cartItemsQuantity))
         let TotalPrice = document.getElementById("TotalItemPrice")
-        TotalPrice.innerHTML = ItemTotalPrice + "đ"
+        TotalPrice.innerHTML = ItemTotalPrice
 
-        const payItem = document.createElement("div")
-        payItem.classList.add("payProduct")
-        payItem.id = "pay-product"
+        let NameList = document.getElementById("nameList")
+        let PriceList = document.getElementById("priceList")
+        let QuantityList = document.getElementById("quantityList")
+        let TotalList = document.getElementById("totalList")
 
         const ItemQuantity = document.createElement("p")
-        ItemQuantity.textContent = "x" + cartItemsQuantity
-        ItemQuantity.id = 'product-quantity'
+        if (cartItemsQuantity >= 1 || cartItemsQuantity >= 9999) {
+          ItemQuantity.textContent = "x" + cartItemsQuantity
+          ItemQuantity.id = 'product-quantity'
+        } else {
+          alert("Vui lòng chọn số lượng")
+          window.location.href = "./purchase.html"
+        }
 
         const ItemPname = document.createElement("p")
         ItemPname.textContent = cartItemsPname
         ItemPname.id = 'product-name'
 
-        payItem.appendChild(ItemPname)
-        payItem.appendChild(ItemPrice)
-        payItem.appendChild(ItemQuantity)
-        payItem.append(ItemTotalPrice)
+        NameList.appendChild(ItemPname)
+        PriceList.appendChild(ItemPrice)
+        QuantityList.appendChild(ItemQuantity)
+        TotalList.append(ItemTotalPrice)
 
-        console.log(ItemTotalPrice)
-
-        const PayList = document.getElementById("payList")
-        PayList.appendChild(payItem)
       }
 
       function clearProductFromLocalStorage() {
         localStorage.removeItem("cartItemsImage");
         localStorage.removeItem("cartItemsDesc");
-      }
-
-      function Checkout() {
-        if (cartItems.length > 0) {
-          alert("Cảm ơn bạn đã mua hàng!");
-          clearAllLocalStorage();
-        } else {
-          alert("Giỏ hàng của bạn đang trống.");
-        }
       }
 
       function clearAllLocalStorage() {
